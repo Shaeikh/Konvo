@@ -1,9 +1,9 @@
 {
-  "name": "chat-application",
+  "name": "Konvo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun server.ts",
+    "dev": "tsx server.ts",
     "build": "next build",
     "start": "NODE_ENV=production tsx server.ts",
     "lint": "eslint"
