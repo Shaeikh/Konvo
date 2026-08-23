@@ -3,13 +3,7 @@ import Database from "better-sqlite3";
 
 export const auth = betterAuth({
   baseURL: {
-    allowedHosts: [
-      "*serveo.net",
-      "http://localhost:3000",
-      "http://192.168.137.1:3000",
-      "*.serveousercontent.com",
-      "https://crinkle-shaping-creatable.ngrok-free.dev",
-    ],
+    allowedHosts: ["https://crinkle-shaping-creatable.ngrok-free.dev"],
     fallback: process.env.BETTER_AUTH_URL || "http://localhost:3000",
   },
   database: new Database("database.sqlite"),
