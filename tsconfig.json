@@ -28,7 +28,8 @@
       ]
     },
     "types": [
-      "bun-types"
+      "bun-types",
+      "node"
     ]
   },
   "include": [
@@ -38,7 +39,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "server.js", "lib/db.js"  ],
   "exclude": [
     "node_modules"
   ]
