@@ -8,7 +8,7 @@
 [![Facebook](https://img.shields.io/badge/Share%20on-Facebook-blue?style=social&logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgithub.com%2FShaeikh%2FKonvo)
 [![Reddit](https://img.shields.io/badge/Share%20on-Reddit-orange?style=social&logo=reddit)](https://www.reddit.com/submit?url=https%3A%2F%2Fgithub.com%2FShaeikh%2FKonvo&title=Check%20out%20this%20awesome%20real-time%20chat%20application%20called%20Konvo!)
 
-###### Konvo is a real-time chat application built with Next, Node.js, Express, and Socket.io. It allows users to communicate with each other in real-time through a web interface.
+##### Konvo is a real-time chat application built with Next, Node.js, Express, and Socket.io. It allows users to communicate with each other in real-time through a web interface.
 
 ### Table of Content
 
