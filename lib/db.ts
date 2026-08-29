@@ -1,27 +1,11 @@
-import Database from "better-sqlite3";
-import path from "path";
-import { v4 as uuidv4 } from "uuid";
+import "dotenv/config";
+import pg from "pg";
+const { Pool } = pg;
 
-const dbPath = path.join(process.cwd(), "database.sqlite");
+const pool = new Pool({ connectionString: process.env.POSTGRESQL_URL });
 
-const db = new Database(dbPath);
-
-db.pragma("journal_mode = WAL");
-
-db.exec(
-  `
-CREATE TABLE IF NOT EXISTS messages (
-    id TEXT PRIMARY KEY,
-    user_id TEXT,
-    room TEXT NOT NULL,
-    type TEXT NOT NULL CHECK(type IN ('normal', 'system')),
-    content TEXT NOT NULL,
-    created_at INTEGER NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES "user"(id)
-);
-CREATE INDEX IF NOT EXISTS messages_room_id_idx
-    ON messages(room, id)
-`,
+await pool.query(
+  ` CREATE TABLE IF NOT EXISTS messages ( id TEXT PRIMARY KEY, user_id TEXT, room TEXT NOT NULL, type TEXT NOT NULL CHECK (type IN ('normal', 'system')), content TEXT NOT NULL, created_at BIGINT NOT NULL, FOREIGN KEY (user_id) REFERENCES "user"(id) ); CREATE INDEX IF NOT EXISTS messages_room_id_idx ON messages(room, id); `,
 );
 
-export default db;
+export default pool;
