@@ -129,31 +129,46 @@ function setupSockets(httpServer: any) {
       socket.to(data.roomID).emit("user-typing", data);
     });
 
-    socket.on("send-message", (message) => {
+    socket.on("send-message", async (message) => {
       try {
-        const query = db.prepare(`
-          INSERT INTO messages (id, user_id, room, type, content, created_at)
-          VALUES (?, ?, ?, ?, ?, ?)
-        `);
-
-        query.run(
-          message.id,
-          message.user.id,
-          message.room,
-          message.type,
-          message.content,
-          message.createdAt,
+        await db.query(
+          `
+      INSERT INTO messages (
+        id,
+        user_id,
+        room,
+        type,
+        content,
+        created_at
+      )
+      VALUES ($1, $2, $3, $4, $5, $6)
+    `,
+          [
+            message.id,
+            message.user.id,
+            message.room,
+            message.type,
+            message.content,
+            message.createdAt,
+          ],
         );
+
         io.to(message.room).emit("receive-message", message);
       } catch (err) {
         console.error("MESSAGE ERROR:", err);
       }
     });
 
-    socket.on("message-delete", (user, message) => {
-      if (user.id !== message.user.id || !message || !user) return;
-      console.log("deleted message");
-      db.prepare("DELETE FROM messages WHERE id = ?").run(message.id);
+    socket.on("message-delete", async (user, message) => {
+      if (!user || !message || user.id !== message.user.id) return;
+
+      try {
+        console.log("deleted message");
+
+        await db.query("DELETE FROM messages WHERE id = $1", [message.id]);
+      } catch (err) {
+        console.error("MESSAGE DELETE ERROR:", err);
+      }
     });
   });
 }
