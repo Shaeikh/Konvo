@@ -48,7 +48,21 @@ export async function GET(
 
     const values = before ? [room, before] : [room];
 
-    const { rows } = await db.query(query, values);
+    type MessageRow = {
+      message_id: string;
+      room: string;
+      type: "normal" | "system";
+      content: string;
+      message_created_at: string;
+      user_id: string | null;
+      name: string | null;
+      email: string | null;
+      image: string | null;
+      user_created_at: Date | null;
+      user_updated_at: Date | null;
+    };
+
+    const { rows } = await db.query<MessageRow>(query, values);
 
     // Reverse so the oldest message is first, matching your
     // original SQLite query.
@@ -59,7 +73,7 @@ export async function GET(
       room: row.room,
       type: row.type,
       content: row.content,
-      createdAt: row.message_created_at,
+      createdAt: Number(row.message_created_at),
 
       user: {
         id: row.user_id,
