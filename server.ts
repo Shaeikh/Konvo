@@ -23,19 +23,13 @@ app.prepare().then(() => {
 function setupSockets(httpServer: any) {
   const allowedOrigins = [
     "http://localhost:3000",
-    "http://192.168.137.1:3000",
-    "https://crinkle-shaping-creatable.ngrok-free.dev",
     process.env.NEXT_PUBLIC_APP_URL,
   ].filter(Boolean);
 
   const io = new Server(httpServer, {
     cors: {
       origin: (origin, callback) => {
-        if (
-          !origin ||
-          allowedOrigins.includes(origin) ||
-          origin.endsWith(".serveousercontent.com")
-        ) {
+        if (!origin || allowedOrigins.includes(origin)) {
           callback(null, true);
         } else {
           console.log("Blocked CORS origin:", origin);

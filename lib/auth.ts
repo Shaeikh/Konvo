@@ -3,8 +3,8 @@ import { Pool } from "pg";
 
 export const auth = betterAuth({
   baseURL: {
-    allowedHosts: ["https://crinkle-shaping-creatable.ngrok-free.dev"],
-    fallback: process.env.BETTER_AUTH_URL || "http://localhost:3000",
+    allowedHosts: [process.env.BETTER_AUTH_URL || "http://localhost:3000"],
+    fallback: "http://localhost:3000",
   },
   database: new Pool({
     connectionString: process.env.POSTGRESQL_URL,
