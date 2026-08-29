@@ -22,8 +22,8 @@ app.prepare().then(() => {
 
 function setupSockets(httpServer: any) {
   const allowedOrigins = [
-    "http://localhost:3000",
     process.env.NEXT_PUBLIC_APP_URL,
+    "http://localhost:3000",
   ].filter(Boolean);
 
   const io = new Server(httpServer, {
