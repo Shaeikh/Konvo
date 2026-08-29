@@ -43,3 +43,7 @@ next-env.d.ts
 # database
 *.sqlite
 *.sqlite-*
+/better-auth_migrations/
+
+#deployment
+deno.jsonc
