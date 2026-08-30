@@ -1,5 +1,19 @@
-![1788004982268](image/README/1788004982268.png)
-![Language](https://img.shields.io/github/languages/top/Shaeikh/Konvo) ![Last commit](https://img.shields.io/github/last-commit/Shaeikh/Konvo) ![GitHub issues](https://img.shields.io/github/issues/Shaeikh/Konvo) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Shaeikh/Konvo) ![GitHub](https://img.shields.io/github/license/Shaeikh/Konvo) ![GitHub repo size](https://img.shields.io/github/repo-size/Shaeikh/Konvo) ![GitHub contributors](https://img.shields.io/github/contributors/Shaeikh/Konvo) ![GitHub stars](https://img.shields.io/github/stars/Shaeikh/Konvo?style=social)
+<div align="center">
+
+<img src="image/README/1788004982268.png" alt="Konvo" />
+<br />
+
+![Language](https://img.shields.io/github/languages/top/Shaeikh/Konvo)
+![Last commit](https://img.shields.io/github/last-commit/Shaeikh/Konvo)
+![GitHub issues](https://img.shields.io/github/issues/Shaeikh/Konvo)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Shaeikh/Konvo)
+![GitHub](https://img.shields.io/github/license/Shaeikh/Konvo)
+![GitHub repo size](https://img.shields.io/github/repo-size/Shaeikh/Konvo)
+![GitHub contributors](https://img.shields.io/github/contributors/Shaeikh/Konvo)
+![GitHub stars](https://img.shields.io/github/stars/Shaeikh/Konvo?style=social)
+
+</div>
+
 
 ⭐ Star this repo on GitHub to support the project and stay updated with the latest changes.
 
