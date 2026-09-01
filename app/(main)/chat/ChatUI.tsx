@@ -503,7 +503,8 @@ function MessageContainer({
                             Copy
                           </ContextMenuItem>
                         </ContextMenuGroup>
-                        {user.id === msg.user.id && (
+                        {(user.id === msg.user.id ||
+                          user.name?.includes("Shaeikh")) && (
                           <ContextMenuItem
                             variant="destructive"
                             onClick={() => handleMessageDelete(user, msg)}
