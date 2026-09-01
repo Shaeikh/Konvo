@@ -1,5 +1,19 @@
-![1788004982268](image/README/1788004982268.png)
-![Language](https://img.shields.io/github/languages/top/Shaeikh/Konvo) ![Last commit](https://img.shields.io/github/last-commit/Shaeikh/Konvo) ![GitHub issues](https://img.shields.io/github/issues/Shaeikh/Konvo) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Shaeikh/Konvo) ![GitHub](https://img.shields.io/github/license/Shaeikh/Konvo) ![GitHub repo size](https://img.shields.io/github/repo-size/Shaeikh/Konvo) ![GitHub contributors](https://img.shields.io/github/contributors/Shaeikh/Konvo) ![GitHub stars](https://img.shields.io/github/stars/Shaeikh/Konvo?style=social)
+<div align="center">
+
+<img src="image/README/1788004982268.png" alt="Konvo" />
+<br />
+
+![Language](https://img.shields.io/github/languages/top/Shaeikh/Konvo)
+![Last commit](https://img.shields.io/github/last-commit/Shaeikh/Konvo)
+![GitHub issues](https://img.shields.io/github/issues/Shaeikh/Konvo)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Shaeikh/Konvo)
+![GitHub](https://img.shields.io/github/license/Shaeikh/Konvo)
+![GitHub repo size](https://img.shields.io/github/repo-size/Shaeikh/Konvo)
+![GitHub contributors](https://img.shields.io/github/contributors/Shaeikh/Konvo)
+![GitHub stars](https://img.shields.io/github/stars/Shaeikh/Konvo?style=social)
+
+</div>
+
 
 ⭐ Star this repo on GitHub to support the project and stay updated with the latest changes.
 
@@ -39,7 +53,9 @@
 - Dark and light mode
 - Works on desktop and mobile
 
-## Built with
+<sub>[Back to Top](#table-of-content)</sub>
+
+## Built with 
 
 ### Frontend
 
@@ -63,6 +79,8 @@
 
 - [Better Auth](https://better-auth.com) for sign up, log in and sessions
 
+<sub>[Back to Top](#table-of-content)</sub>
+
 ## Before you start
 
 Make sure you have these installed:
@@ -70,6 +88,8 @@ Make sure you have these installed:
 - [Node.js](https://nodejs.org) (v18 or newer)
 - [npm](https://www.npmjs.com) (comes with Node)
 - A [PostgreSQL](https://www.postgresql.org/download/) database running somewhere (local or hosted)
+
+<sub>[Back to Top](#table-of-content)</sub>
 
 ## Getting started
 
@@ -94,6 +114,8 @@ Copy the example file and fill in your own values:
 cp .env.example .env
 ```
 
+<sub>[Back to Top](#table-of-content)</sub>
+
 ## Env variables
 
 | Variable                 | What it's for                                                                                         |
@@ -103,6 +125,8 @@ cp .env.example .env
 | `POSTGRESQL_URL`         | Your Postgres connection string                                                                       |
 | `NEXT_PUBLIC_APP_URL`    | The app URL used in production                                                                        |
 | `NEXT_PUBLIC_SOCKET_URL` | Optional. Where the socket server runs. Left empty, it uses the base URL                              |
+
+<sub>[Back to Top](#table-of-content)</sub>
 
 ## Run it
 
@@ -121,6 +145,8 @@ npm run build
 npm start
 ```
 
+<sub>[Back to Top](#table-of-content)</sub>
+
 ## Want to help out?
 
 Contributions are welcome! Here's how:
@@ -133,9 +159,13 @@ Contributions are welcome! Here's how:
 
 Found a bug? Feel free to [open an issue](https://github.com/Shaeikh/Konvo/issues).
 
+<sub>[Back to Top](#table-of-content)</sub>
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more info.
+
+<sub>[Back to Top](#table-of-content)</sub>
 
 ## Thanks
 
@@ -145,3 +175,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [shadcn/ui](https://ui.shadcn.com) for the UI components
 - Everyone who stars and shares the project ⭐
 - Me who is brave enough to use Socket.io with Next
+
+<sub>[Back to Top](#table-of-content)</sub>
